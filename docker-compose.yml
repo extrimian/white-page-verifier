@@ -1,0 +1,11 @@
+version: "3"
+services:
+  ticketing-verifier:
+    image: extrimianpublic.azurecr.io/ticket-verifier:1.0.3
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - REACT_APP_VERIFICATION_INTEGRATION=https://popupcity-wsp.extrimian.com/integration
+      - REACT_APP_DID=did:quarkid:EiAe38RmWDpK02n0r3HT1pVlqp8o5gxwVP7fbfll5HSm1A
